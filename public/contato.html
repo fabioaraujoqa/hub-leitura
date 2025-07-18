@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato – Hub de Leitura</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/preflight.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/header.js" defer></script>
+  <script src="/js/contato.js" defer></script>
+  <script src="/js/footer.js" defer></script>
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- header.html será injetado aqui -->
+
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <!-- Cabeçalho -->
+        <div class="text-center mb-12 fade-in">
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">Entre em Contato</h2>
+          <p class="text-xl text-gray-600">Estamos aqui para ajudar você em sua jornada literária</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Informações -->
+          <div class="fade-in">
+            <h3 class="text-2xl font-bold mb-6">Fale Conosco</h3>
+            <p><i class="fas fa-phone text-blue-600 mr-2"></i>(11) 3000‑0000</p>
+            <p><i class="fas fa-envelope text-green-600 mr-2"></i>contato@biblioteca.com</p>
+            <p><i class="fas fa-map-marker-alt text-purple-600 mr-2"></i>São Paulo, SP – Brasil</p>
+            <p><i class="fas fa-clock text-orange-600 mr-2"></i>24 h por dia, 7 dias por semana</p>
+          </div>
+
+          <!-- Formulário -->
+          <div class="fade-in">
+            <form id="contactForm" class="bg-white p-8 rounded-lg shadow-lg space-y-6">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Nome</label>
+                <input name="name" type="text" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">E‑mail</label>
+                <input name="email" type="email" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Assunto</label>
+                <select name="subject" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                  <option value="">Selecione...</option>
+                  <option>Dúvidas Gerais</option>
+                  <option>Suporte Técnico</option>
+                  <option>Sugestões</option>
+                  <option>Parcerias</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Mensagem</label>
+                <textarea name="message" rows="4" required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                <i class="fas fa-paper-plane mr-2"></i>Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer.html será injetado aqui -->
+
+</body>
+
+</html>

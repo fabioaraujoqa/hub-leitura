@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seu Título Padrão</title>
+
+  <!-- Reset + Preflight Tailwind -->
+  <link rel="stylesheet" href="/css/preflight.css">
+  <!-- CSS global do projeto -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- Injeção de header (inclui também Font Awesome) -->
+  <script src="/js/header.js" defer></script>
+  <!-- Injeção de footer -->
+  <script src="/js/footer.js" defer></script>
+  <!-- (Opcional) CSS específico desta página -->
+  <!-- <link rel="stylesheet" href="/css/page.css"> -->
+</head>
+
+<body class="bg-gray-50">
+
+  <!-- 
+    O header será automaticamente injetado aqui pelo header.js
+  -->
+
+  <main class="container mx-auto px-4 py-8">
+    <!-- Espaço para o título da página -->
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Título da Página</h1>
+    <!-- Espaço para o subtítulo -->
+    <h2 class="text-2xl text-gray-600 mb-6">Subtítulo descritivo</h2>
+
+    <!-- Exemplos de conteúdo -->
+    <section class="space-y-6">
+      <p class="text-base text-gray-700">
+        Aqui vai o seu parágrafo de introdução. Explique o propósito desta página ou qualquer informação relevante.
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <!-- Exemplo de botão que redireciona -->
+        <button onclick="redirectToLogin('user')"
+                class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+          Fazer Login
+        </button>
+
+        <!-- Exemplo de link para seção na mesma página -->
+        <a href="#exemplo-section"
+           class="text-blue-600 underline hover:text-blue-800 transition-colors">
+          Ir para exemplo
+        </a>
+      </div>
+
+      <!-- Seção de exemplo roteada por âncora -->
+      <div id="exemplo-section" class="mt-12 p-6 bg-white rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold mb-2">Seção de Exemplo</h3>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Item 1 de exemplo</li>
+          <li>Item 2 de exemplo</li>
+          <li>Item 3 de exemplo</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- 
+    O footer será automaticamente injetado aqui pelo footer.js
+  -->
+
+  <!-- (Opcional) JS específico desta página -->
+  <!-- <script src="/js/page.js" defer></script> -->
+
+</body>
+</html>

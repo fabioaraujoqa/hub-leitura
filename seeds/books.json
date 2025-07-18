@@ -1,0 +1,186 @@
+[
+    {
+        "title": "Dom Casmurro",
+        "author": "Machado de Assis",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Companhia das Letras",
+        "category": "Clássicos",
+        "available": 5
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "isbn": "978-0-452-28423-4",
+        "editor": "Companhia das Letras",
+        "category": "Ficção",
+        "available": 4
+    },
+    {
+        "title": "O Pequeno Príncipe",
+        "author": "Antoine de Saint-Exupéry",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Agir",
+        "category": "Infantil",
+        "available": 10
+    },
+    {
+        "title": "A Revolução dos Bichos",
+        "author": "George Orwell",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Companhia das Letras",
+        "category": "Ficção",
+        "available": 3
+    },
+    {
+        "title": "O Senhor dos Anéis: A Sociedade do Anel",
+        "author": "J.R.R. Tolkien",
+        "isbn": "978-85-359-0277-5",
+        "editor": "HarperCollins Brasil",
+        "category": "Fantasia",
+        "available": 2
+    },
+    {
+        "title": "A Arte da Guerra",
+        "author": "Sun Tzu",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Nova Fronteira",
+        "category": "Estratégia",
+        "available": 6
+    },
+    {
+        "title": "O Alquimista",
+        "author": "Paulo Coelho",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Rocco",
+        "category": "Ficção",
+        "available": 8
+    },
+    {
+        "title": "A Menina que Roubava Livros",
+        "author": "Markus Zusak",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Intrínseca",
+        "category": "Ficção",
+        "available": 7
+    },
+    {
+        "title": "O Código Da Vinci",
+        "author": "Dan Brown",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Sextante",
+        "category": "Mistério",
+        "available": 5
+    },
+    {
+        "title": "Harry Potter e a Pedra Filosofal",
+        "author": "J.K. Rowling",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Rocco",
+        "category": "Fantasia",
+        "available": 9
+    },
+    {
+        "title": "Orgulho e Preconceito",
+        "author": "Jane Austen",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Martin Claret",
+        "category": "Romance",
+        "available": 4
+    },
+    {
+        "title": "O Hobbit",
+        "author": "J.R.R. Tolkien",
+        "isbn": "978-85-359-0277-5",
+        "editor": "HarperCollins Brasil",
+        "category": "Fantasia",
+        "available": 3
+    },
+    {
+        "title": "Cem Anos de Solidão",
+        "author": "Gabriel García Márquez",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Record",
+        "category": "Realismo Mágico",
+        "available": 6
+    },
+    {
+        "title": "O Morro dos Ventos Uivantes",
+        "author": "Emily Brontë",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Martin Claret",
+        "category": "Romance",
+        "available": 2
+    },
+    {
+        "title": "A Metamorfose",
+        "author": "Franz Kafka",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Companhia das Letras",
+        "category": "Ficção",
+        "available": 5
+    },
+    {
+        "title": "O Diário de Anne Frank",
+        "author": "Anne Frank",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Record",
+        "category": "Biografia",
+        "available": 4
+    },
+    {
+        "title": "A Divina Comédia",
+        "author": "Dante Alighieri",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Nova Fronteira",
+        "category": "Poesia",
+        "available": 3
+    },
+    {
+        "title": "Dom Quixote",
+        "author": "Miguel de Cervantes",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Martin Claret",
+        "category": "Romance",
+        "available": 6
+    },
+    {
+        "title": "O Sol é Para Todos",
+        "author": "Harper Lee",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora José Olympio",
+        "category": "Ficção",
+        "available": 5
+    },
+    {
+        "title": "A Revolução dos Bichos",
+        "author": "George Orwell",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Companhia das Letras",
+        "category": "Ficção",
+        "available": 3
+    },
+    {
+        "title": "O Senhor das Moscas",
+        "author": "William Golding",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Record",
+        "category": "Ficção",
+        "available": 4
+    },
+    {
+        "title": "A Insustentável Leveza do Ser",
+        "author": "Milan Kundera",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Companhia das Letras",
+        "category": "Ficção",
+        "available": 2
+    },
+    {
+        "title": "O Nome da Rosa",
+        "author": "Umberto Eco",
+        "isbn": "978-85-359-0277-5",
+        "editor": "Editora Rocco",
+        "category": "Mistério",
+        "available": 3
+    }
+]
