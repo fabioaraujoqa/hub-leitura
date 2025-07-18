@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+
+    <!-- Reset + Preflight Tailwind -->
+    <link rel="stylesheet" href="/css/preflight.css">
+    <!-- CSS global do projeto -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Injeção de header (inclui também Font Awesome) -->
+    <script src="/js/header.js" defer></script>
+    <!-- Injeção de footer -->
+    <script src="/js/footer.js" defer></script>
+    <!-- (Opcional) CSS específico desta página -->
+    <!-- <link rel="stylesheet" href="/css/page.css"> -->
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- 
+    O header será automaticamente injetado aqui pelo header.js
+  -->
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Espaço para o título da página -->
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Título da Página</h1>
+        <!-- Espaço para o subtítulo -->
+        <h2 class="text-2xl text-gray-600 mb-6">Subtítulo descritivo</h2>
+
+        <!-- Exemplos de conteúdo -->
+        <section class="space-y-6">
+            <p class="text-base text-gray-700">
+                Aqui vai o seu parágrafo de introdução. Explique o propósito desta página ou qualquer informação
+                relevante.
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <!-- Exemplo de botão que redireciona -->
+                <button onclick="redirectToLogin('user')"
+                    class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                    Fazer Login
+                </button>
+
+                <!-- Exemplo de link para seção na mesma página -->
+                <a href="#exemplo-section" class="text-blue-600 underline hover:text-blue-800 transition-colors">
+                    Ir para exemplo
+                </a>
+            </div>
+
+            <!-- Seção de exemplo roteada por âncora -->
+            <main class="container mx-auto px-4 py-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid lg:grid-cols-3 gap-8">
+                        <!-- Login/Register Form -->
+                        <div class="lg:col-span-2">
+                            <div class="bg-white rounded-lg shadow-lg p-8 fade-in">
+                                <!-- Form Toggle -->
+                                <div class="flex mb-8 bg-gray-100 rounded-lg p-1">
+                                    <button id="loginTab"
+                                        class="flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors text-gray-600">
+                                        Fazer Login
+                                    </button>
+                                    <button id="registerTab"
+                                        class="flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors hover:text-gray-800 bg-white text-blue-600 shadow-sm">
+                                        Criar Conta
+                                    </button>
+                                </div>
+
+                                <!-- Login Form -->
+                                <div id="loginForm" class="form-transition hidden">
+                                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Entre na sua conta</h2>
+                                    <form class="space-y-6">
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                E-mail ou CPF
+                                            </label>
+                                            <input type="text" required=""
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                placeholder="Digite seu e-mail ou CPF">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                Senha
+                                            </label>
+                                            <div class="relative">
+                                                <input type="password" required=""
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-12"
+                                                    placeholder="Digite sua senha">
+                                                <button type="button"
+                                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="flex items-center justify-between">
+                                            <label class="flex items-center">
+                                                <input type="checkbox"
+                                                    class="rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                                <span class="ml-2 text-sm text-gray-600">Lembrar de mim</span>
+                                            </label>
+                                            <a href="#" class="text-sm text-blue-600 hover:text-blue-700">Esqueci minha
+                                                senha</a>
+                                        </div>
+                                        <button type="submit"
+                                            class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                                            Entrar e Continuar
+                                        </button>
+                                    </form>
+
+                                    <!-- Social Login -->
+                                    <div class="mt-6">
+                                        <div class="relative">
+                                            <div class="absolute inset-0 flex items-center">
+                                                <div class="w-full border-t border-gray-300"></div>
+                                            </div>
+                                            <div class="relative flex justify-center text-sm">
+                                                <span class="px-2 bg-white text-gray-500">Ou continue com</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-6 grid grid-cols-2 gap-3">
+                                            <button
+                                                class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                                <i class="fab fa-google text-red-500 mr-2"></i>
+                                                Google
+                                            </button>
+                                            <button
+                                                class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                                                <i class="fab fa-facebook text-blue-600 mr-2"></i>
+                                                Facebook
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Register Form -->
+                                <div id="registerForm" class="form-transition">
+                                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Criar nova conta</h2>
+                                    <form class="space-y-6">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Nome Completo
+                                                </label>
+                                                <input type="text" required=""
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                    placeholder="Seu nome completo">
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                    CPF
+                                                </label>
+                                                <input type="text" required=""
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                    placeholder="000.000.000-00">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                E-mail
+                                            </label>
+                                            <input type="email" required=""
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                placeholder="seu@email.com">
+                                        </div>
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Telefone
+                                                </label>
+                                                <input type="tel" required=""
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                    placeholder="(11) 99999-9999">
+                                            </div>
+                                            <div>
+                                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                    Data de Nascimento
+                                                </label>
+                                                <input type="date" required=""
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                Senha
+                                            </label>
+                                            <div class="relative">
+                                                <input type="password" required=""
+                                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent pr-12"
+                                                    placeholder="Mínimo 8 caracteres">
+                                                <button type="button"
+                                                    class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                                                    <i class="fas fa-eye"></i>
+                                                </button>
+                                            </div>
+                                            <div class="mt-2 text-xs text-gray-500">
+                                                A senha deve ter pelo menos 8 caracteres, incluindo letras e números.
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                                Confirmar Senha
+                                            </label>
+                                            <input type="password" required=""
+                                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                                placeholder="Digite a senha novamente">
+                                        </div>
+                                        <div class="flex items-start">
+                                            <input type="checkbox" required=""
+                                                class="mt-1 rounded border-gray-300 text-blue-600 focus:ring-blue-500">
+                                            <span class="ml-2 text-sm text-gray-600">
+                                                Aceito os <a href="#" class="text-blue-600 hover:text-blue-700">Termos
+                                                    de Uso</a>
+                                                e <a href="#" class="text-blue-600 hover:text-blue-700">Política de
+                                                    Privacidade</a>
+                                            </span>
+                                        </div>
+                                        <button type="submit"
+                                            class="w-full bg-green-600 text-white py-3 px-4 rounded-lg hover:bg-green-700 transition-colors font-semibold">
+                                            Criar Conta e Continuar
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+    O footer será automaticamente injetado aqui pelo footer.js
+  -->
+
+    <!-- (Opcional) JS específico desta página -->
+    <!-- <script src="/js/page.js" defer></script> -->
+
+</body>
+
+</html>

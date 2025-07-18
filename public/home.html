@@ -25,18 +25,19 @@
                     Milhares de títulos ao seu alcance. Explore, aprenda e transforme sua vida através da leitura.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button onclick="scrollToSection('catalog')"
+                    <button id="catalogBtn"
                         class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors">
                         <i class="fas fa-search mr-2"></i>
                         Explorar Catálogo
                     </button>
-                    <button onclick="redirectToLogin('user')"
-                        class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors">
+                    <a href="login.html"
+                        class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center">
                         <i class="fas fa-user-plus mr-2"></i>
                         Criar Conta Grátis
-                    </button>
+                    </a>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -230,11 +231,16 @@
                 </div>
             </div>
 
-            <div class="text-center mt-12">
-                <button id="catalogBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="catalogBtn"
+                    class="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
+                    style="margin-top: 48px;">
+                    <i class="fas fa-book mr-2"></i>
                     Ver Catálogo
                 </button>
             </div>
+
+        </div>
         </div>
     </section>
 

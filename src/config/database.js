@@ -99,7 +99,7 @@ async function initDatabase() {
 
       // Mensagens de contato
       db.run(
-        `CREATE TABLE IF NOT EXISTS contacts (
+        `CREATE TABLE IF NOT EXISTS messages (
            id INTEGER PRIMARY KEY AUTOINCREMENT,
            name TEXT NOT NULL,
            email TEXT NOT NULL,

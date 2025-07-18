@@ -19,11 +19,20 @@ body {
    ===================== */
 .header {
   background: #fff;
-  padding: 1rem 2rem;
+  padding: 0.25rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  min-height: 40px;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.admin-gradient {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
 .nav-list {
