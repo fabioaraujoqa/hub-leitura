@@ -7,12 +7,24 @@
   box-sizing: border-box;
 }
 
+.main-content {
+    margin-top: 110px;
+}
+
 body {
   font-family: "Helvetica Neue", Arial, sans-serif;
+  padding-top: 96px;
   line-height: 1.5;
   color: #333;
   background: #f9f9f9;
 }
+
+@media (max-width: 1024px) {
+  body {
+    padding-top: 120px; 
+  }
+}
+
 
 /* =====================
    2. LAYOUT GERAL

@@ -1,12 +1,26 @@
-document.addEventListener('DOMContentLoaded', () => {
-  fetch('/footer.html')
-    .then(res => {
-      if (!res.ok) throw new Error('Não foi possível carregar footer.html');
-      return res.text();
-    })
-    .then(html => {
-      // insere o footer ao fim do body
-      document.body.insertAdjacentHTML('beforeend', html);
-    })
-    .catch(err => console.error('Erro ao carregar footer:', err));
+// ========== INSERÇÃO DO FOOTER ==========
+document.addEventListener("DOMContentLoaded", async () => {
+  if (document.getElementById("footer-loaded")) return; // evita múltiplas injeções
+
+  // verifica se há cache no sessionStorage
+  const cached = sessionStorage.getItem("footerHtml");
+  const wrapper = document.createElement("div");
+  wrapper.id = "footer-loaded";
+
+  if (cached) {
+    wrapper.innerHTML = cached;
+    document.body.appendChild(wrapper);
+    return;
+  }
+
+  try {
+    const res = await fetch("/footer.html");
+    if (!res.ok) throw new Error("Não foi possível carregar footer.html");
+    const html = await res.text();
+    sessionStorage.setItem("footerHtml", html); // salva em cache
+    wrapper.innerHTML = html;
+    document.body.appendChild(wrapper);
+  } catch (err) {
+    console.error("Erro ao carregar footer:", err);
+  }
 });

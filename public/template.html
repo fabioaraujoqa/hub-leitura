@@ -59,6 +59,36 @@
           <li>Item 3 de exemplo</li>
         </ul>
       </div>
+
+       <div class="w-full relative flex flex-col items-center">
+    <!-- Botão de favoritar no canto superior direito -->
+    <button class="favorite-btn absolute top-2 right-2 text-red-500 text-xl" data-book-id="${book.id}" title="Favoritar" style="z-index:2;">
+      <i class="far fa-heart"></i>
+    </button>
+
+    <!-- Ícone do livro -->
+    <div class="text-blue-600 text-5xl mb-3 mt-6">
+      <i class="fas fa-book"></i>
+    </div>
+  </div>
+
+  <!-- Informações -->
+  <h3 class="font-semibold text-lg text-gray-800">${book.title}</h3>
+  <p class="text-sm text-gray-600">${book.author}</p>
+  <p class="text-sm text-gray-600">${book.editor || '—'}</p>
+  <p class="text-sm text-green-600 mt-1">${book.available} disponíveis</p>
+
+  <!-- Botões -->
+  <div class="mt-4 flex flex-col w-full gap-2">
+    <button class="reserve-btn bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-medium transition-colors" data-book-id="${book.id}">
+      <i class="fas fa-calendar-plus mr-1"></i>Reservar
+    </button>
+    <button class="details-btn bg-white border border-blue-600 text-blue-600 px-4 py-2 rounded font-medium transition-colors hover:bg-blue-50" data-book-id="${book.id}">
+      <i class="fas fa-info-circle mr-1"></i>Detalhes
+    </button>
+  </div>
+
+
     </section>
   </main>
 

@@ -1,4 +1,4 @@
-<header class="bg-white shadow-lg sticky top-0 z-50">
+<header class="bg-white shadow-lg fixed inset-x-0 top-0 z-[99999] w-full">
   <div class="container mx-auto px-4">
     <div class="flex items-center justify-between py-1">
 
@@ -23,14 +23,27 @@
       </nav>
 
       <!-- Botões de ação -->
-      <div class="flex items-center space-x-3">
-        <button id="adminBtn" class="admin-gradient text-white px-4 py-2 rounded-lg text-sm font-medium">
-          <i class="fas fa-user-shield mr-2"></i>Admin
-        </button>
+        <div class="flex items-center space-x-3">
+            <button onclick="window.location.href='/carrinho.html'"
+            class="relative border border-blue-600 bg-transparent text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg flex items-center gap-2 font-medium transition-colors">
+            <i class="fas fa-book mr-2"></i>
+            <span>Reservas:</span>
+            <span id="cartCount"
+                class="ml-2 bg-red-600 text-white rounded-full text-sm px-5 py-1.5">0</span>
+            </button>
 
-        <button id="loginBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium">
-          <i class="fas fa-sign-in-alt mr-2"></i>Entrar
-        </button>
+          <button id="adminBtn" class="admin-gradient text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+            <i class="fas fa-user-shield mr-2"></i>
+            <span>Admin</span>
+          </button>
+
+          <button id="loginBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2">
+            <i class="fas fa-sign-in-alt mr-2"></i>
+            <span>Entrar</span>
+          </button>
+        </div>
+
+
 
         <button id="mobileMenuBtn" class="lg:hidden text-gray-600">
           <i class="fas fa-bars text-xl"></i>

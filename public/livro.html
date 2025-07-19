@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detalhes do Livro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/css/preflight.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/utils/reservas.js"></script>
+  <script src="/js/header.js" defer></script>
+  <script src="/js/footer.js" defer></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+          <!-- Cabeçalho -->
+        <div class="text-center mb-8 fade-in">
+          <br><br>
+          <h2 class="text-4xl font-bold text-gray-800 mb-4">Detalhes do livro</h2>
+          <p class="text-xl text-gray-600">Informações completas para sua escolha de leitura!</p>
+        </div>
+
+  <main class="max-w-4xl mx-auto mt-8 px-4 flex-grow">
+    <a href="/catalogo.html" class="inline-block mb-4 text-blue-600 hover:underline">
+      <i class="fa-solid fa-arrow-left mr-1"></i> Voltar ao Catálogo
+    </a>
+    <div><br></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div>
+        <img id="capaLivro" class="rounded w-full shadow" alt="Capa do livro" />
+      </div>
+
+      <div class="md:col-span-2 space-y-2">
+        <h1 id="tituloLivro" class="text-2xl font-bold text-gray-900"></h1>
+        <p><strong>Autor:</strong> <span id="autorLivro"></span></p>
+        <p><strong>Editora:</strong> <span id="editoraLivro"></span></p>
+        <p><strong>Ano:</strong> <span id="anoLivro"></span></p>
+        <p><strong>Categoria:</strong> <span id="categoriaLivro"></span></p>
+        <p><strong>Páginas:</strong> <span id="paginasLivro"></span></p>
+        <p><strong>Formato:</strong> <span id="formatoLivro"></span></p>
+        <p><strong>Idioma:</strong> <span id="idiomaLivro"></span></p>
+        <p><strong>Disponibilidade:</strong> <span id="disponibilidadeLivro" class="text-green-600 font-medium"></span></p>        
+        <button id="btnReservar"
+          class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          disabled>
+          Reservar livro
+        </button>
+
+      </div>
+    </div>
+
+    <div class="mt-8 mb-16"></div>
+      <h2 class="text-xl font-semibold mb-2">Resumo</h2>
+      <p id="resumoLivro" class="text-justify leading-relaxed"></p>
+    </div>
+    <div><br><br></div>
+  </main>
+
+  <script src="/js/livro.js"></script>
+
+</body>
+
+</html>

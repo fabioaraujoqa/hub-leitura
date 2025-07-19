@@ -28,4 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
       showNotification('Falha na comunicação com o servidor', 'error');
     }
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+  if (typeof atualizarContadorReservas === "function") {
+    atualizarContadorReservas();
+  }
+});
 });
