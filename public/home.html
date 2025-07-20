@@ -72,23 +72,28 @@
                 <h2 class="text-4xl font-bold text-gray-800 mb-4">Livros em Destaque</h2>
                 <p class="text-xl text-gray-600">Descubra os títulos mais populares da nossa biblioteca</p>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
                 <!-- Book 1 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden book-hover fade-in"
-                    onclick="redirectToBookDetails('dom-casmurro')"
                     style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
-                    <div class="book-cover h-64 flex items-center justify-center relative">
-                        <div class="book-spine"></div>
-                        <div class="text-center p-4">
-                            <i class="fas fa-book text-6xl text-blue-600 mb-4"></i>
-                            <h3 class="font-bold text-gray-800">Dom Casmurro</h3>
-                            <p class="text-sm text-gray-600">Machado de Assis</p>
+
+                    <!-- Seção da Capa - Altura fixa -->
+                    <div class="h-48 flex items-center justify-center bg-gray-50 p-4">
+                        <img src="/img/capas/dom-casmurro.jpg" alt="Capa do livro Dom Casmurro"
+                            class="h-40 w-auto max-w-full rounded shadow-md object-cover">
+                    </div>
+
+                    <!-- Seção das Informações -->
+                    <div class="p-4 flex flex-col h-48">
+                        <!-- Título e Autor -->
+                        <div class="mb-3">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1 text-center line-clamp-2">Dom Casmurro</h3>
+                            <p class="text-sm text-gray-600 text-center mb-2">Machado de Assis</p>
                         </div>
 
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center mb-2">
+                        <!-- Avaliação -->
+                        <div class="flex items-center justify-center mb-3">
                             <div class="flex text-sm text-yellow-300">
                                 <i class="fas fa-star star-rating"></i>
                                 <i class="fas fa-star star-rating"></i>
@@ -98,9 +103,15 @@
                             </div>
                             <span class="text-sm text-gray-600 ml-2">(3.5)</span>
                         </div>
-                        <p class="text-sm text-gray-600 mb-3">Romance clássico da literatura brasileira que explora
-                            temas de amor, ciúme e dúvida.</p>
-                        <div class="flex items-center justify-between">
+
+                        <!-- Descrição -->
+                        <div class="flex-1 mb-3">
+                            <p class="text-sm text-gray-600 line-clamp-2">Romance clássico da literatura brasileira que
+                                explora temas de amor, ciúme e dúvida.</p>
+                        </div>
+
+                        <!-- Status e Categoria -->
+                        <div class="flex items-center justify-between mt-auto">
                             <span class="text-sm font-medium text-green-600">
                                 <i class="fas fa-check-circle mr-1"></i>
                                 Disponível
@@ -112,19 +123,24 @@
 
                 <!-- Book 2 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden book-hover fade-in"
-                    onclick="redirectToBookDetails('1984')"
                     style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
-                    <div class="book-cover h-64 flex items-center justify-center relative">
-                        <div class="book-spine"></div>
-                        <div class="text-center p-4">
-                            <i class="fas fa-book text-6xl text-red-600 mb-4"></i>
-                            <h3 class="font-bold text-gray-800">1984</h3>
-                            <p class="text-sm text-gray-600">George Orwell</p>
+
+                    <!-- Seção da Capa - Altura fixa -->
+                    <div class="h-48 flex items-center justify-center bg-gray-50 p-4">
+                        <img src="/img/capas/1984.jpg" alt="Capa do livro 1984"
+                            class="h-40 w-auto max-w-full rounded shadow-md object-cover">
+                    </div>
+
+                    <!-- Seção das Informações -->
+                    <div class="p-4 flex flex-col h-48">
+                        <!-- Título e Autor -->
+                        <div class="mb-3">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1 text-center line-clamp-2">1984</h3>
+                            <p class="text-sm text-gray-600 text-center mb-2">George Orwell</p>
                         </div>
 
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center mb-2">
+                        <!-- Avaliação -->
+                        <div class="flex items-center justify-center mb-3">
                             <div class="flex text-sm text-yellow-300">
                                 <i class="fas fa-star star-rating"></i>
                                 <i class="fas fa-star star-rating"></i>
@@ -134,9 +150,14 @@
                             </div>
                             <span class="text-sm text-gray-600 ml-2">(4.9)</span>
                         </div>
-                        <p class="text-sm text-gray-600 mb-3">Distopia clássica sobre vigilância, controle e liberdade
-                            individual.</p>
-                        <div class="flex items-center justify-between">
+
+                        <!-- Descrição -->
+                        <div class="flex-1 mb-3">
+                            <p class="text-sm text-gray-600 line-clamp-2">Distopia clássica sobre vigilância, controle e liberdade individual.</p>
+                        </div>
+
+                        <!-- Status e Categoria -->
+                        <div class="flex items-center justify-between mt-auto">
                             <span class="text-sm font-medium text-green-600">
                                 <i class="fas fa-check-circle mr-1"></i>
                                 Disponível
@@ -148,19 +169,24 @@
 
                 <!-- Book 3 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden book-hover fade-in"
-                    onclick="redirectToBookDetails('o-pequeno-principe')"
                     style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
-                    <div class="book-cover h-64 flex items-center justify-center relative">
-                        <div class="book-spine"></div>
-                        <div class="text-center p-4">
-                            <i class="fas fa-book text-6xl text-yellow-600 mb-4"></i>
-                            <h3 class="font-bold text-gray-800">O Pequeno Príncipe</h3>
-                            <p class="text-sm text-gray-600">Antoine de Saint-Exupéry</p>
-                        </div>
- 
+
+                    <!-- Seção da Capa - Altura fixa -->
+                    <div class="h-48 flex items-center justify-center bg-gray-50 p-4">
+                        <img src="/img/capas/pequeno-principe.jpg" alt="Capa do livro O Pequeno Príncipe"
+                            class="h-40 w-auto max-w-full rounded shadow-md object-cover">
                     </div>
-                    <div class="p-4">
-                        <div class="flex items-center mb-2">
+
+                    <!-- Seção das Informações -->
+                    <div class="p-4 flex flex-col h-48">
+                        <!-- Título e Autor -->
+                        <div class="mb-3">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1 text-center line-clamp-2">O Pequeno Príncipe</h3>
+                            <p class="text-sm text-gray-600 text-center mb-2">Antoine de Saint-Exupéry</p>
+                        </div>
+
+                        <!-- Avaliação -->
+                        <div class="flex items-center justify-center mb-3">
                             <div class="flex text-sm text-yellow-300">
                                 <i class="fas fa-star star-rating"></i>
                                 <i class="fas fa-star star-rating"></i>
@@ -170,9 +196,14 @@
                             </div>
                             <span class="text-sm text-gray-600 ml-2">(4.7)</span>
                         </div>
-                        <p class="text-sm text-gray-600 mb-3">Uma fábula poética sobre amizade, amor e o sentido da
-                            vida.</p>
-                        <div class="flex items-center justify-between">
+
+                        <!-- Descrição -->
+                        <div class="flex-1 mb-3">
+                            <p class="text-sm text-gray-600 line-clamp-2">Uma fábula poética sobre amizade, amor e o sentido da vida.</p>
+                        </div>
+
+                        <!-- Status e Categoria -->
+                        <div class="flex items-center justify-between mt-auto">
                             <span class="text-sm font-medium text-orange-600">
                                 <i class="fas fa-clock mr-1"></i>
                                 Reservado
@@ -184,19 +215,24 @@
 
                 <!-- Book 4 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden book-hover fade-in"
-                    onclick="redirectToBookDetails('sapiens')"
                     style="opacity: 1; transform: translateY(0px); transition: 0.6s;">
-                    <div class="book-cover h-64 flex items-center justify-center relative">
-                        <div class="book-spine"></div>
-                        <div class="text-center p-4">
-                            <i class="fas fa-book text-6xl text-green-600 mb-4"></i>
-                            <h3 class="font-bold text-gray-800">Sapiens</h3>
-                            <p class="text-sm text-gray-600">Yuval Noah Harari</p>
+
+                    <!-- Seção da Capa - Altura fixa -->
+                    <div class="h-48 flex items-center justify-center bg-gray-50 p-4">
+                        <img src="/img/capas/sapiens.jpg" alt="Capa do livro Sapiens"
+                            class="h-40 w-auto max-w-full rounded shadow-md object-cover">
+                    </div>
+
+                    <!-- Seção das Informações -->
+                    <div class="p-4 flex flex-col h-48">
+                        <!-- Título e Autor -->
+                        <div class="mb-3">
+                            <h3 class="font-bold text-gray-800 text-lg mb-1 text-center line-clamp-2">Sapiens</h3>
+                            <p class="text-sm text-gray-600 text-center mb-2">Yuval Noah Harari</p>
                         </div>
 
-                    </div>
-                    <div class="p-4">
-                        <div class="flex items-center mb-2">
+                        <!-- Avaliação -->
+                        <div class="flex items-center justify-center mb-3">
                             <div class="flex text-sm text-yellow-300">
                                 <i class="fas fa-star star-rating"></i>
                                 <i class="fas fa-star star-rating"></i>
@@ -206,9 +242,14 @@
                             </div>
                             <span class="text-sm text-gray-600 ml-2">(4.0)</span>
                         </div>
-                        <p class="text-sm text-gray-600 mb-3">Uma breve história da humanidade desde a Idade da Pedra
-                            até a era digital.</p>
-                        <div class="flex items-center justify-between">
+
+                        <!-- Descrição -->
+                        <div class="flex-1 mb-3">
+                            <p class="text-sm text-gray-600 line-clamp-2">Uma breve história da humanidade desde a Idade da Pedra até a era digital.</p>
+                        </div>
+
+                        <!-- Status e Categoria -->
+                        <div class="flex items-center justify-between mt-auto">
                             <span class="text-sm font-medium text-green-600">
                                 <i class="fas fa-check-circle mr-1"></i>
                                 Disponível

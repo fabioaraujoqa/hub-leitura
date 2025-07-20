@@ -50,8 +50,19 @@ window.AppHeader = {
     const badge = document.getElementById("cartCount");
     if (badge) {
       badge.textContent = reservas.length;
-      badge.style.display = reservas.length > 0 ? "inline-block" : "none";
+      // Sempre mostra o contador, mesmo que seja 0
+      badge.style.display = "inline-block";
     }
+    
+    // Dispara evento personalizado para notificar que o contador foi atualizado
+    window.dispatchEvent(new CustomEvent('reservasUpdated', { 
+      detail: { count: reservas.length } 
+    }));
+  },
+
+  // Nova função para forçar atualização
+  forceUpdateCounter() {
+    this.atualizarContadorReservas();
   },
 
   async loadHeader() {
@@ -96,9 +107,39 @@ window.AppHeader = {
 
       this.atualizarContadorReservas();
 
+      // Observa mudanças no localStorage
+      this.setupStorageListener();
+
     } catch (err) {
       console.error("Erro ao carregar header:", err);
     }
+  },
+
+  // Nova função para observar mudanças no localStorage
+  setupStorageListener() {
+    // Listener para mudanças diretas no localStorage
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'reservas') {
+        this.atualizarContadorReservas();
+      }
+    });
+
+    // MutationObserver para detectar mudanças no localStorage da mesma aba
+    const originalSetItem = localStorage.setItem;
+    localStorage.setItem = function(key, value) {
+      originalSetItem.call(this, key, value);
+      if (key === 'reservas') {
+        // Delay pequeno para garantir que a mudança foi aplicada
+        setTimeout(() => {
+          AppHeader.atualizarContadorReservas();
+        }, 10);
+      }
+    };
+
+    // Atualiza periodicamente como fallback
+    setInterval(() => {
+      this.atualizarContadorReservas();
+    }, 1000);
   }
 };
 
@@ -107,6 +148,10 @@ window.showNotification = AppHeader.showNotification.bind(AppHeader);
 window.redirectToLogin = AppHeader.redirectToLogin.bind(AppHeader);
 window.redirectToBookCatalog = AppHeader.redirectToBookCatalog.bind(AppHeader);
 window.scrollToSection = AppHeader.scrollToSection.bind(AppHeader);
+
+// Função global para atualizar o contador (mantém compatibilidade)
+window.atualizarContadorReservas = () => AppHeader.atualizarContadorReservas();
+window.updateReservationCountOnly = () => AppHeader.atualizarContadorReservas();
 
 // ========== INSERÇÃO DO HEADER ==========
 document.addEventListener("DOMContentLoaded", () => AppHeader.loadHeader());
